@@ -13,18 +13,31 @@ The goal of this project is to provide a basic implementation of a people manage
 ## Project Structure
 
 src/
+
 │
+
 ├── main/
+
 │ └── java/
+
 │ └── people/
+
 │ ├── person.java
+
 │ ├── Responsible.java
+
 │ └── Student.java
+
 │
+
 └── test/
+
 └── java/
+
 └── people/
+
 ├── ResponsibleTest.java
+
 └── StudentTest.java
 
 
@@ -42,9 +55,13 @@ Follow these steps to run the project:
 1. Clone this repository to your local environment.
 2. Navigate to the root folder of the project.
 3. Execute the following command in the terminal to compile the project:
+
    javac -d bin src/main/java/people/.java src/test/java/people/.java
-4. Execute the following command to run the tests:
+
+5. Execute the following command to run the tests:
+
    java -cp bin:lib/junit-jupiter-api-5.8.2.jar
+
    org.junit.platform.console.ConsoleLauncher --scan-class-path
 
 ## Contribution
