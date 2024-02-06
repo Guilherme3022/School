@@ -34,14 +34,14 @@ public class Responsible extends person {
         }
     }
 
-    private String convertsListOnString(ArrayList<Integer> list){
+    public String convertsListOnString(ArrayList<Integer> list){
         String resultado ="";
         for(int l : list){
             resultado +=l+", ";
         }
         return resultado;
     }
-    private String paymentsMade(){
+    public String paymentsMade(){
         ArrayList<Integer> paidMonths = new ArrayList<Integer>();
         for (int month =1; month < payments.length;month++){
             if(payments[month-1]){

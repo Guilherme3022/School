@@ -5,8 +5,8 @@ public class Student extends person {
     private String registration;
     private double[] grades = new double[unit];
 
-    public Student(String name, String id, String phone, String email, String registration){
-        super(name, id, phone , email);
+    public Student(String name, String id,  String email,String phone, String registration){
+        super(name, id , email, phone);
         this.registration = registration;
     }
     public String getRegistration(){
@@ -25,14 +25,14 @@ public class Student extends person {
         grades[unit - 1] = grade;
 
     }
-    private double finalMedia(){
+    public double finalMedia(){
         double sumOfGrades = 0;
         for (double grade : grades)
             sumOfGrades +=grade;
         return sumOfGrades/unit;
 
     }
-    private int defineUnit(int mouth){
+    public int defineUnit(int mouth){
         if(mouth>=1 && mouth<=3){
             return 1;
         }else if(mouth>=4 && mouth<=6){
@@ -55,7 +55,7 @@ public class Student extends person {
     public String situation(int x) {
         int currentUnit = defineUnit(x);
         if (getGrades()[currentUnit-1] >= 7 ){
-            return "the student achieved above average in the unit" +currentUnit+ "with the grade: "+getGrades()[currentUnit-1] + "\n";
+            return "the student achieved above average in the unit " +currentUnit+ " with the grade: "+getGrades()[currentUnit-1] + "\n";
         }else {
             return "below average in this unit" + "\n";
         }
